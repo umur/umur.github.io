@@ -1,7 +1,12 @@
 # umur.github.io
 
-Personal site for Umur Inan, served by GitHub Pages. Lives at `https://umur.github.io`
-and at the custom domain `https://umurinan.com`.
+Personal site for Umur Inan, served by GitHub Pages at `https://umur.github.io`.
+
+> Custom domain note: `umurinan.com` currently points to **Cloudflare** (a
+> different, already-live deployment), not GitHub Pages. The `CNAME` file was
+> removed so this site stays reachable at `umur.github.io`. To move the domain
+> here, repoint `umurinan.com` DNS at GitHub Pages and re-add a `CNAME` file.
+> See the "Custom domain" section below.
 
 ## Structure
 
