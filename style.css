@@ -88,11 +88,22 @@ h1 {
 .tag-green  { color: #5ed29a; background: rgba(94, 210, 154, 0.10); }
 .tag-purple { color: #a78bfa; background: rgba(167, 139, 250, 0.10); }
 
+.section-title {
+  text-align: left;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
 .books {
   list-style: none;
-  margin: 0 0 1.75rem;
-  padding: 1.25rem 0;
-  border-top: 1px solid var(--line);
+  margin: 0.6rem 0 1.75rem;
+  padding: 0 0 1.5rem;
   border-bottom: 1px solid var(--line);
   text-align: left;
 }
@@ -103,14 +114,18 @@ h1 {
   justify-content: space-between;
   gap: 0.75rem;
   margin: 0.5rem 0;
-  font-size: 0.88rem;
-}
-
-.books li span {
-  color: var(--fg);
 }
 
 .books li a {
+  color: var(--fg);
+  font-size: 0.88rem;
+}
+
+.books li a:hover {
+  color: var(--accent);
+}
+
+.books li span {
   color: var(--muted);
   font-size: 0.8rem;
   white-space: nowrap;
@@ -163,17 +178,3 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-/* Blog pages (reached via the small Blog link) */
-.container {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-  text-align: left;
-}
-
-.post-list { list-style: none; padding: 0; }
-.post-list li { margin: 1rem 0; }
-.post-date { display: block; color: var(--muted); font-size: 0.85rem; }
-.post p { margin: 1.1rem 0; }
-.backlink { display: inline-block; margin-bottom: 1.5rem; font-size: 0.9rem; }
