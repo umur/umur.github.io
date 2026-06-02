@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"cd /Users/umurinan/Documents/dev/umur-github/umur.github.io\\npython3 -m http.server 8765 >/tmp/umur-pages.log 2>&1 &\\nSRV=$!\\nsleep 1\\nfor p in \\\"/\\\" \\\"/style.css\\\" \\\"/blog/\\\" \\\"/blog/hell...",
-  "error": "Exit code 1\n200  /\n200  /style.css\n200  /blog/\n200  /blog/hello-world.html\n200  /CNAME\n--- titles ---\n<title>Umur Inan</title>\n<title>Blog: Umur Inan</title>\n--- book count on home ---\n5\n--- CNAME contents ---\numurinan.com",
-  "timestamp": "2026-06-02T19:15:53.055Z",
-  "retry_count": 1
-}
