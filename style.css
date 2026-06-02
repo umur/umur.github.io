@@ -20,7 +20,7 @@ html, body {
 .container {
   max-width: 720px;
   margin: 0 auto;
-  padding: 6rem 1.5rem 3rem;
+  padding: 5rem 1.5rem 3rem;
 }
 
 .hero h1 {
@@ -32,7 +32,12 @@ html, body {
 .tagline {
   color: var(--muted);
   font-size: 1.15rem;
-  margin: 0;
+  margin: 0 0 1.25rem;
+}
+
+.topnav a {
+  margin-right: 1.25rem;
+  font-size: 0.95rem;
 }
 
 section {
@@ -48,10 +53,28 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
-.links ul {
-  list-style: none;
+ul {
   padding: 0;
   margin: 0;
+  list-style: none;
+}
+
+.book-list li,
+.research-list li {
+  margin: 0.9rem 0;
+}
+
+.book-title,
+.research-title {
+  display: block;
+  font-weight: 600;
+}
+
+.book-meta,
+.research-desc {
+  display: block;
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .links li {
@@ -71,4 +94,39 @@ a:hover {
   margin-top: 4rem;
   color: var(--muted);
   font-size: 0.85rem;
+}
+
+/* Blog */
+.post-list li {
+  margin: 1.1rem 0;
+}
+
+.post-date {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.post {
+  font-size: 1.05rem;
+}
+
+.post h1 {
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.post .post-date {
+  margin-bottom: 2rem;
+}
+
+.post p {
+  margin: 1.1rem 0;
+}
+
+.backlink {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
 }
