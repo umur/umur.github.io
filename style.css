@@ -1,9 +1,10 @@
 :root {
   --bg: #0f1115;
-  --fg: #e6e6e6;
+  --card: #14171d;
+  --fg: #e8e8ea;
   --muted: #9aa0a6;
   --accent: #6ea8fe;
-  --line: #23262d;
+  --line: #262a33;
 }
 
 * { box-sizing: border-box; }
@@ -11,74 +12,108 @@
 html, body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
   background: var(--bg);
   color: var(--fg);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
-.container {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 5rem 1.5rem 3rem;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
 }
 
-.hero h1 {
-  font-size: 2.75rem;
-  margin: 0 0 0.5rem;
+.card {
+  width: 100%;
+  max-width: 460px;
+  text-align: center;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 2.5rem 2rem 2rem;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border: 1px solid var(--line);
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-size: 1.7rem;
+  margin: 0 0 0.35rem;
   letter-spacing: -0.02em;
 }
 
 .tagline {
-  color: var(--muted);
-  font-size: 1.15rem;
-  margin: 0 0 1.25rem;
+  color: var(--fg);
+  margin: 0 0 0.9rem;
+  font-size: 1rem;
 }
 
-.topnav a {
-  margin-right: 1.25rem;
-  font-size: 0.95rem;
-}
-
-section {
-  margin-top: 3rem;
-}
-
-h2 {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 0.5rem;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.book-list li,
-.research-list li {
-  margin: 0.9rem 0;
-}
-
-.book-title,
-.research-title {
-  display: block;
-  font-weight: 600;
-}
-
-.book-meta,
-.research-desc {
-  display: block;
+.bio {
   color: var(--muted);
   font-size: 0.92rem;
+  margin: 0 auto 1.5rem;
+  max-width: 38ch;
 }
 
-.links li {
-  margin: 0.4rem 0;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 1.75rem;
+}
+
+.tags span {
+  font-size: 0.78rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+}
+
+.books {
+  list-style: none;
+  margin: 0 0 1.75rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+.books li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 0.88rem;
+}
+
+.books li span {
+  color: var(--fg);
+}
+
+.books li a {
+  color: var(--muted);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1.1rem;
 }
 
 a {
@@ -90,43 +125,16 @@ a:hover {
   text-decoration: underline;
 }
 
-.footer {
-  margin-top: 4rem;
-  color: var(--muted);
-  font-size: 0.85rem;
+/* Blog pages (reached via the small Blog link) */
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: left;
 }
 
-/* Blog */
-.post-list li {
-  margin: 1.1rem 0;
-}
-
-.post-date {
-  display: block;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-.post {
-  font-size: 1.05rem;
-}
-
-.post h1 {
-  font-size: 2rem;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.25rem;
-}
-
-.post .post-date {
-  margin-bottom: 2rem;
-}
-
-.post p {
-  margin: 1.1rem 0;
-}
-
-.backlink {
-  display: inline-block;
-  margin-bottom: 2rem;
-  font-size: 0.9rem;
-}
+.post-list { list-style: none; padding: 0; }
+.post-list li { margin: 1rem 0; }
+.post-date { display: block; color: var(--muted); font-size: 0.85rem; }
+.post p { margin: 1.1rem 0; }
+.backlink { display: inline-block; margin-bottom: 1.5rem; font-size: 0.9rem; }
